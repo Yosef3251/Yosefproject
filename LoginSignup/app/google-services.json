@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "409033019855",
+    "project_id": "test-9028b",
+    "storage_bucket": "test-9028b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409033019855:android:e7e05cc52dc0938960c2ba",
+        "android_client_info": {
+          "package_name": "com.ghazy.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409033019855-043gdba06ksrm68llv17tuojnuju0jte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7TCp73zgONJo94v5czMP98MCAPaQudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409033019855-043gdba06ksrm68llv17tuojnuju0jte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409033019855:android:99e7e6f2707c19a760c2ba",
+        "android_client_info": {
+          "package_name": "com.yosef.loginsignup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409033019855-043gdba06ksrm68llv17tuojnuju0jte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE7TCp73zgONJo94v5czMP98MCAPaQudA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409033019855-043gdba06ksrm68llv17tuojnuju0jte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
