@@ -22,4 +22,9 @@ public class FirstPage extends AppCompatActivity {
         Intent i = new Intent(this, AddQuestion.class);
         startActivity(i);
     }
+
+    public void AllQuestions(View view) {
+        Intent i = new Intent(this, AllQuestions.class);
+        startActivity(i);
+    }
 }

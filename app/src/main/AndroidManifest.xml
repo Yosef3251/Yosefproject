@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yosefproject1011">
         <activity
+            android:name=".AddSubject"
+            android:exported="false" />
+        <activity
             android:name=".AllQuestions"
             android:exported="false" />
         <activity

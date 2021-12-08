@@ -1,8 +1,9 @@
 package com.yosef.yosefproject1011;
 public class Question {
-    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4;
+    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Photo;
     private int Points;
-    public Question(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4) {
+
+    public Question(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4,String Photo) {
         this.Question = Question;
         this.NumberOfQuestion = NumberOfQuestion;
         this.Points = Points;
@@ -10,6 +11,7 @@ public class Question {
         this.Option2 = Option2;
         this.Option3 = Option3;
         this.Option4 = Option4;
+        this.Photo = Photo;
     }
     @Override
     public String toString() {
@@ -79,4 +81,8 @@ public class Question {
     public void setPoints(int points) {
         Points = points;
     }
+
+    public String getPhoto() { return Photo; }
+
+    public void setPhoto(String photo) { Photo = photo; }
 }

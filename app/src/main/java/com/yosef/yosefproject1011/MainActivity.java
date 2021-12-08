@@ -55,10 +55,9 @@ public class MainActivity extends AppCompatActivity {
                             // TODO: commands if successfull
 
                         } else {
-
-                            // TODO: commands if failed
                             Toast.makeText(MainActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                             return;
+                            // TODO: commands if failed
                         }
                     }
                 });

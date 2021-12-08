@@ -9,7 +9,7 @@
     <EditText
         android:id="@+id/etEmailSignup"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="131dp"
@@ -27,7 +27,7 @@
     <EditText
         android:id="@+id/etNameSignup"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="118dp"
         android:layout_marginTop="356dp"
         android:layout_marginEnd="133dp"
@@ -46,7 +46,7 @@
     <EditText
         android:id="@+id/etPasswordSignup"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="131dp"
@@ -64,7 +64,7 @@
     <EditText
         android:id="@+id/etPhoneSignup"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="120dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="131dp"
@@ -81,14 +81,14 @@
 
     <Button
         android:id="@+id/btnSignup"
-        android:onClick="SignUpToApp"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginStart="158dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="159dp"
         android:layout_marginBottom="44dp"
         android:backgroundTint="#F40000"
+        android:onClick="SignUpToApp"
         android:text="Sign Up"
         app:layout_constraintBottom_toTopOf="@+id/tvHaveSignUp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,13 +114,14 @@
 
     <TextView
         android:id="@+id/tvBackloginSignup"
-        android:onClick="Backlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="175dp"
         android:layout_marginBottom="82dp"
+        android:minHeight="48dp"
+        android:onClick="Backlogin"
         android:text="Click here"
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,7 +140,9 @@
         android:layout_marginBottom="21dp"
         app:layout_constraintBottom_toTopOf="@+id/etNameSignup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.588"
         app:srcCompat="@drawable/icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

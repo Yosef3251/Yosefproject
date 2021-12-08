@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Yosefproject10.11</string>
+    <string name="err_fields_empty">Some fields are empty!</string>
     <string name="email">Email...</string>
     <string name="password">Password...</string>
-
+    <string name="question">Question</string>
+    <string name="todo">TODO</string>
+    <string
+        name="err_firebase_general">Genera Error firebase!</string>
 
 </resources>
