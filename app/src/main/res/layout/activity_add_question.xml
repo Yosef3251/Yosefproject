@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
         android:hint="Question"
@@ -36,10 +36,10 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etPointsQuestion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etQuestionQuestion"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etPointsQuestion"
@@ -54,7 +54,7 @@
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etOption1Question"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -124,14 +124,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="104dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="16dp"
         android:text="Add Question"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/etQuestionQuestion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

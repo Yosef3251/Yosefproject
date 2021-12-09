@@ -7,10 +7,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -26,14 +24,13 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.UUID;
 
 public class AddQuestion extends AppCompatActivity {
     private EditText etQuestion, etNumber, etPoints, etOption1, etOption2, etOption3, etOption4;
     private ImageView ivAdd;
-    private FirebaseServices fbs;
+    private AllQuestions.FirebaseServices fbs;
     private Uri filePath;
     private static final String TAG = "AddQuestion";
     StorageReference storageReference;
@@ -54,7 +51,7 @@ public class AddQuestion extends AppCompatActivity {
         etOption3 = findViewById(R.id.etOption3Question);
         etOption4 = findViewById(R.id.etOption4Question);
         ivAdd = findViewById(R.id.ivAddImgQuestion);
-        fbs = FirebaseServices.getInstance();
+        fbs = AllQuestions.FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }
 

@@ -4,38 +4,36 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHolder> {
+public class RecyclerViewAdapterSubject extends RecyclerView.Adapter<com.yosef.yosefproject1011.RecyclerViewAdapterSubject.ViewHolder>{
 
-    private List<Question> mData;
+    private List<String> mData;
     private LayoutInflater mInflater;
-    private RecyclerViewAdapterQuestion.ItemClickListener mClickListener;
+    private RecyclerViewAdapterSubject.ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    AdapterQuestion(Context context, List<Question> data) {
+    RecyclerViewAdapterSubject(Context context, List<String> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
 
     // inflates the row layout from xml when needed
     @Override
-    public AdapterQuestion.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerViewAdapterSubject.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row_question, parent, false);
-        return new AdapterQuestion.ViewHolder(view);
+        return new RecyclerViewAdapterSubject.ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
-    public void onBindViewHolder(AdapterQuestion.ViewHolder holder, int position) {
-        Question Que = mData.get(position);
-        holder.tvQuestion.setText(Que.getQuestion());
-        //holder.ivPhoto.setImageDrawable(rest.getPhoto());
+    public void onBindViewHolder(RecyclerViewAdapterSubject.ViewHolder holder, int position) {
+        String animal = mData.get(position);
+        holder.myTextView.setText(animal);
     }
 
     // total number of rows
@@ -47,13 +45,11 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView tvQuestion;
-        ImageView ivQuestion;
+        TextView myTextView;
 
         ViewHolder(View itemView) {
             super(itemView);
-            tvQuestion = itemView.findViewById(R.id.tvQuestionRow);
-            ivQuestion = itemView.findViewById(R.id.ivQuestionRow);
+            myTextView = itemView.findViewById(R.id.tvSubjectRow);
             itemView.setOnClickListener(this);
         }
 
@@ -64,12 +60,12 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
     }
 
     // convenience method for getting data at click position
-    Question getItem(int id) {
+    String getItem(int id) {
         return mData.get(id);
     }
 
     // allows clicks events to be caught
-    void setClickListener(RecyclerViewAdapterQuestion.ItemClickListener itemClickListener) {
+    void setClickListener(RecyclerViewAdapterSubject.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -16,13 +15,12 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseUser;
 
 public class SignupActivity extends AppCompatActivity {
     private EditText etName, etEmail, etPassword, etPhone;
     private Button btn;
     private TextView tvBacklogin;
-    private FirebaseServices fbs;
+    private AllQuestions.FirebaseServices fbs;
     private Utilities utils;
     private static final String TAG ="SignupActivity";
 
@@ -42,7 +40,7 @@ public class SignupActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhoneSignup);
         btn = findViewById(R.id.btnSignup);
         tvBacklogin = findViewById(R.id.tvBackloginSignup);
-        fbs = FirebaseServices.getInstance();
+        fbs = AllQuestions.FirebaseServices.getInstance();
         utils = Utilities.getInstance();
     }
     public void SignUpToApp(View view) {
