@@ -14,9 +14,7 @@ import java.util.ArrayList;
 
 public class AllQuestions extends AppCompatActivity {
 
-    private RecyclerView rvAllRest;
-    RecyclerViewAdapterQuestion adapter;
-
+    private RecyclerView rvQuestions;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +28,10 @@ public class AllQuestions extends AppCompatActivity {
         QuestionNum.add("Question 5");
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvQuestionsAllQuestions);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new RecyclerViewAdapterQuestion(this, QuestionNum);
-        recyclerView.setAdapter(adapter);
+        rvQuestions = findViewById(R.id.rvQuestionsAllQuestions);
+        rvQuestions.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerViewAdapterQuestion adapter= new RecyclerViewAdapterQuestion(this, QuestionNum);
+        rvQuestions.setAdapter(adapter);
     }
 
     public static class FirebaseServices {

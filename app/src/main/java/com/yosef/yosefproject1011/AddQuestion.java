@@ -104,6 +104,7 @@ public class AddQuestion extends AppCompatActivity {
             if (resultCode == Activity.RESULT_OK) {
                 if (data != null) {
                     try {
+                        filePath = data.getData();
                         Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
                         ivAdd.setBackground(null);
                         ivAdd.setImageBitmap(bitmap);

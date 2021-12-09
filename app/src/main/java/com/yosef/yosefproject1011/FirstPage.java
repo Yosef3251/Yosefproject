@@ -27,4 +27,9 @@ public class FirstPage extends AppCompatActivity {
         Intent i = new Intent(this, AllQuestions.class);
         startActivity(i);
     }
+
+    public void AddSubject(View view) {
+        Intent i = new Intent(this,AddSubject.class);
+        startActivity(i);
+    }
 }
