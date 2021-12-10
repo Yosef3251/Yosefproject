@@ -12,7 +12,7 @@ import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
 
-public class AllQuestions extends AppCompatActivity {
+public class AllQuestionsActivity extends AppCompatActivity {
 
     private RecyclerView rvQuestions;
     @Override

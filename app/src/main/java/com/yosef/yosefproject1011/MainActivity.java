@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
     private Button btnLogin;
     private TextView tvForgetpass, tvCreata;
-    private AllQuestions.FirebaseServices fbs;
+    private AllQuestionsActivity.FirebaseServices fbs;
     private Utilities utils;
 
     @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void connectComponents() {
         etUsername = findViewById(R.id.etUsernameMain);
         etPassword = findViewById(R.id.etPasswordMain);
-        fbs = AllQuestions.FirebaseServices.getInstance();
+        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
         utils = Utilities.getInstance();
     }
     public void Login(View view) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Success login", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(getApplicationContext(), FirstPage.class);
+                            Intent i = new Intent(getApplicationContext(), FirstPageActivity.class);
                             startActivity(i);
                             // TODO: commands if successfull
 
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //New page when u press forgot password
     public void Forget(View view) {
-        Intent i = new Intent(this, SendSMS.class);
+        Intent i = new Intent(this, SendSMSActivity.class);
         startActivity(i);
     }
 }

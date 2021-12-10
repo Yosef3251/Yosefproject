@@ -10,19 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yosefproject1011" >
         <activity
-            android:name=".AddSubject"
+            android:name=".AddSubjectActivity"
             android:exported="false" />
         <activity
-            android:name=".AllQuestions"
+            android:name=".AllQuestionsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddQuestion"
+            android:name=".AddQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".FirstPage"
+            android:name=".FirstPageActivity"
             android:exported="false" />
         <activity
-            android:name=".SendSMS"
+            android:name=".SendSMSActivity"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"

@@ -20,7 +20,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText etName, etEmail, etPassword, etPhone;
     private Button btn;
     private TextView tvBacklogin;
-    private AllQuestions.FirebaseServices fbs;
+    private AllQuestionsActivity.FirebaseServices fbs;
     private Utilities utils;
     private static final String TAG ="SignupActivity";
 
@@ -40,7 +40,7 @@ public class SignupActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhoneSignup);
         btn = findViewById(R.id.btnSignup);
         tvBacklogin = findViewById(R.id.tvBackloginSignup);
-        fbs = AllQuestions.FirebaseServices.getInstance();
+        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
         utils = Utilities.getInstance();
     }
     public void SignUpToApp(View view) {

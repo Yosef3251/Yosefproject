@@ -27,10 +27,10 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.UUID;
 
-public class AddQuestion extends AppCompatActivity {
+public class AddQuestionActivity extends AppCompatActivity {
     private EditText etQuestion, etNumber, etPoints, etOption1, etOption2, etOption3, etOption4;
     private ImageView ivAdd;
-    private AllQuestions.FirebaseServices fbs;
+    private AllQuestionsActivity.FirebaseServices fbs;
     private Uri filePath;
     private static final String TAG = "AddQuestion";
     StorageReference storageReference;
@@ -51,7 +51,7 @@ public class AddQuestion extends AppCompatActivity {
         etOption3 = findViewById(R.id.etOption3Question);
         etOption4 = findViewById(R.id.etOption4Question);
         ivAdd = findViewById(R.id.ivAddImgQuestion);
-        fbs = AllQuestions.FirebaseServices.getInstance();
+        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }
 
@@ -75,7 +75,7 @@ public class AddQuestion extends AppCompatActivity {
             Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
             return;
         }
-        Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
+        QuestionActivity q = new QuestionActivity(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
         fbs.getFire().collection("Questions")
                 .add(q)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -149,7 +149,7 @@ public class AddQuestion extends AppCompatActivity {
                                     // Dismiss dialog
                                     progressDialog.dismiss();
                                     Toast
-                                            .makeText(AddQuestion.this,
+                                            .makeText(AddQuestionActivity.this,
                                                     "Image Uploaded!!",
                                                     Toast.LENGTH_SHORT)
                                             .show();
@@ -163,7 +163,7 @@ public class AddQuestion extends AppCompatActivity {
                             // Error, Image not uploaded
                             progressDialog.dismiss();
                             Toast
-                                    .makeText(AddQuestion.this,
+                                    .makeText(AddQuestionActivity.this,
                                             "Failed " + e.getMessage(),
                                             Toast.LENGTH_SHORT)
                                     .show();

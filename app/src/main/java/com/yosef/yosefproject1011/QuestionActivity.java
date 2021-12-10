@@ -1,9 +1,9 @@
 package com.yosef.yosefproject1011;
-public class Question {
+public class QuestionActivity {
     private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Photo;
     private int Points;
 
-    public Question(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4,String Photo) {
+    public QuestionActivity(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4, String Photo) {
         this.Question = Question;
         this.NumberOfQuestion = NumberOfQuestion;
         this.Points = Points;

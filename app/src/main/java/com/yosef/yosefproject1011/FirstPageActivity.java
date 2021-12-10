@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class FirstPage extends AppCompatActivity {
+public class FirstPageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,17 +19,17 @@ public class FirstPage extends AppCompatActivity {
     }
 
     public void Question(View view) {
-        Intent i = new Intent(this, AddQuestion.class);
+        Intent i = new Intent(this, AddQuestionActivity.class);
         startActivity(i);
     }
 
     public void AllQuestions(View view) {
-        Intent i = new Intent(this, AllQuestions.class);
+        Intent i = new Intent(this, AllQuestionsActivity.class);
         startActivity(i);
     }
 
     public void AddSubject(View view) {
-        Intent i = new Intent(this,AddSubject.class);
+        Intent i = new Intent(this, AddSubjectActivity.class);
         startActivity(i);
     }
 }

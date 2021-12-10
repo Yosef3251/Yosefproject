@@ -6,7 +6,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class SendSMS extends AppCompatActivity {
+public class SendSMSActivity extends AppCompatActivity {
     Button btnSendSMS;
     EditText etPhoneSMS;
     @Override
