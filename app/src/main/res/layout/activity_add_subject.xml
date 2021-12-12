@@ -5,16 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddSubjectActivity">
+
     <ImageView
         android:id="@+id/ivPicRightSubject"
         android:layout_width="177dp"
         android:layout_height="166dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="147dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvSubjectSubject"
         app:srcCompat="@drawable/addimg" />
 
     <TextView
@@ -50,31 +49,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSubjectSubject"
-        android:layout_width="398dp"
-        android:layout_height="243dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/ivPicRightSubject"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSubjectSubject" />
-
     <ImageView
         android:id="@+id/ivPicLeftSubject"
         android:layout_width="194dp"
         android:layout_height="166dp"
         android:layout_marginStart="6dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toTopOf="@+id/btnAddSubjectSubject"
         app:layout_constraintEnd_toStartOf="@+id/ivPicRightSubject"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvSubjectSubject"
         app:srcCompat="@drawable/addimg" />
 
     <Button
@@ -90,4 +74,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPicRightSubject" />
+
+    <EditText
+        android:id="@+id/etInfoSubject"
+        android:layout_width="365dp"
+        android:layout_height="141dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="164dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

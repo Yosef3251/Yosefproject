@@ -75,7 +75,7 @@ public class AddQuestionActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
             return;
         }
-        QuestionActivity q = new QuestionActivity(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
+        com.yosef.yosefproject1011.Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
         fbs.getFire().collection("Questions")
                 .add(q)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

@@ -13,12 +13,12 @@ import java.util.List;
 
 public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHolder> {
 
-    private List<QuestionActivity> mData;
+    private List<Question> mData;
     private LayoutInflater mInflater;
     private RecyclerViewAdapterQuestion.ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    AdapterQuestion(Context context, List<QuestionActivity> data) {
+    AdapterQuestion(Context context, List<Question> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
     }
@@ -33,7 +33,7 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(AdapterQuestion.ViewHolder holder, int position) {
-        QuestionActivity Que = mData.get(position);
+        Question Que = mData.get(position);
         holder.tvQuestion.setText(Que.getQuestion());
         //holder.ivPhoto.setImageDrawable(rest.getPhoto());
     }
@@ -64,7 +64,7 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
     }
 
     // convenience method for getting data at click position
-    QuestionActivity getItem(int id) {
+    Question getItem(int id) {
         return mData.get(id);
     }
 
