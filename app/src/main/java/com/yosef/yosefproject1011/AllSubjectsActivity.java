@@ -16,34 +16,5 @@ public class AllSubjectsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_all_subjects);
     }
 
-    public static class FirebaseServices {
-        private static AllQuestionsActivity.FirebaseServices instance;
-        private FirebaseAuth auth;
-        private FirebaseFirestore fire;
-        private FirebaseStorage storage;
 
-        public FirebaseAuth getAuth() {
-            return auth;
-        }
-
-        public FirebaseFirestore getFire() {
-            return fire;
-        }
-
-        public FirebaseStorage getStorage() {
-            return storage;
-        }
-
-        public FirebaseServices() {
-            auth = FirebaseAuth.getInstance();
-            fire = FirebaseFirestore.getInstance();
-            storage = FirebaseStorage.getInstance();
-        }
-
-        public static AllQuestionsActivity.FirebaseServices getInstance() {
-            if (instance == null)
-                instance = new AllQuestionsActivity.FirebaseServices();
-            return instance;
-        }
-    }
 }

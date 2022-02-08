@@ -31,7 +31,7 @@ public class AddSubjectActivity extends AppCompatActivity {
     private EditText etSubject, etInfo;
     private ImageView ivPicLeft, ivPicRight;
     private Button btnAddSubject;
-    private AllSubjectsActivity.FirebaseServices fbs;
+    private FirebaseServices fbs;
     private Uri filePath;
     private static final String TAG = "AddSubject";
     StorageReference storageReference;
@@ -47,7 +47,7 @@ public class AddSubjectActivity extends AppCompatActivity {
         ivPicRight = findViewById(R.id.ivPicRightSubject);
         btnAddSubject = findViewById(R.id.btnAddSubjectSubject);
 
-        fbs = AllSubjectsActivity.FirebaseServices.getInstance();
+        fbs = FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }
 
@@ -69,7 +69,8 @@ public class AddSubjectActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
                 return;
             }
-            Subject s = new Question(Subject, Number, Info, Photo);
+
+            Subject s = new Subject(Subject, Info, Photo);
             fbs.getFire().collection("Subjects")
                     .add(s)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -185,4 +186,3 @@ public class AddSubjectActivity extends AppCompatActivity {
             }
         }
     }
-}
