@@ -21,7 +21,8 @@ public class Question {
                 ", Option1='" + Option1 + '\'' +
                 ", Option2='" + Option2 + '\'' +
                 ", Option3='" + Option3 + '\'' +
-                ", Option4='" + Option4 + '\'' +
+                ", " +
+                "Option4='" + Option4 + '\'' +
                 ", Points=" + Points +
                 '}';
     }
@@ -85,4 +86,5 @@ public class Question {
     public String getPhoto() { return Photo; }
 
     public void setPhoto(String photo) { Photo = photo; }
+
 }
