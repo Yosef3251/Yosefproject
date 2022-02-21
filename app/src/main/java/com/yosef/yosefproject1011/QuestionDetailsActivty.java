@@ -27,7 +27,6 @@ public class QuestionDetailsActivty extends AppCompatActivity {
         connectComponents();
         Intent i = this.getIntent();
         Question que = (Question) i.getSerializableExtra("que");
-';'
         tvQuestion.setText(que.getQuestion());
         tvNumberOfQuestion.setText(que.getNumberOfQuestion());
         tvOption1.setText(que.getOption1());
@@ -37,12 +36,11 @@ public class QuestionDetailsActivty extends AppCompatActivity {
 
 
 
-        tvPhone.setText(que.getPhone());
         Picasso.get().load(que.getPhoto()).into(ivPhoto);
     }
 
     private void connectComponents() {
-        tvQuestion = findViewById(R.id.tvQuestion);
+        tvQuestion = findViewById(R.id.tvQuestionRow);
         tvNumberOfQuestion = findViewById(R.id.tvNumberOfQuestionRestDetails);
         tvOption1 = findViewById(R.id.tvOption1RestDetails);
         tvOption2 = findViewById(R.id.tvCategoryRestDetails);
