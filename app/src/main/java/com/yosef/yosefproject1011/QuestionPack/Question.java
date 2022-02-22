@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.QuestionPack;
 public class Question {
     private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Phone, Photo;
     private int Points;

@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.yosef.yosefproject1011.QuestionPack.AddQuestionActivity;
+import com.yosef.yosefproject1011.QuestionPack.AllQuestionsActivity;
+
 public class FirstPageActivity extends AppCompatActivity {
 
     @Override

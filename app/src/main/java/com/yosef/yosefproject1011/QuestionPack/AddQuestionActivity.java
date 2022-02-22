@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.QuestionPack;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +23,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.yosef.yosefproject1011.R;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -75,7 +76,7 @@ public class AddQuestionActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
             return;
         }
-        com.yosef.yosefproject1011.Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
+        com.yosef.yosefproject1011.QuestionPack.Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
         fbs.getFire().collection("Questions")
                 .add(q)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

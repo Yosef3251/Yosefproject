@@ -70,7 +70,7 @@ public class AddSubjectActivity extends AppCompatActivity {
                 return;
             }
 
-            Subject s = new Subject(Subject, Info, Photo);
+            com.yosef.yosefproject1011.Subject s = new Subject(Subject, Info, Photo);
             fbs.getFire().collection("Subjects")
                     .add(s)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

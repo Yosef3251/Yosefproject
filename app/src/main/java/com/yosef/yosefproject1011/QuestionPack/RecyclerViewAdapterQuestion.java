@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.QuestionPack;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.yosef.yosefproject1011.R;
 
 import java.util.List;
 

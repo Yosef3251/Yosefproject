@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.QuestionPack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.yosef.yosefproject1011.QuestionPack.Question;
+import com.yosef.yosefproject1011.R;
 
 public class QuestionDetailsActivty extends AppCompatActivity {
     
@@ -33,8 +35,6 @@ public class QuestionDetailsActivty extends AppCompatActivity {
         tvOption2.setText(que.getOption2());
         tvOption3.setText(que.getOption3());
         tvOption4.setText(que.getOption4());
-
-
 
         Picasso.get().load(que.getPhoto()).into(ivPhoto);
     }
