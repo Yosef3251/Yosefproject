@@ -1,6 +1,6 @@
 package com.yosef.yosefproject1011;
 public class Question {
-    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Photo;
+    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Phone, Photo;
     private int Points;
 
     public Question(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4, String Photo) {
@@ -21,7 +21,8 @@ public class Question {
                 ", Option1='" + Option1 + '\'' +
                 ", Option2='" + Option2 + '\'' +
                 ", Option3='" + Option3 + '\'' +
-                ", Option4='" + Option4 + '\'' +
+                ", " +
+                "Option4='" + Option4 + '\'' +
                 ", Points=" + Points +
                 '}';
     }
@@ -85,4 +86,5 @@ public class Question {
     public String getPhoto() { return Photo; }
 
     public void setPhoto(String photo) { Photo = photo; }
+
 }
