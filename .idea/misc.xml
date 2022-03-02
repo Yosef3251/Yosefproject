@@ -7,6 +7,7 @@
         <entry key="..\:/Users/AbedElghani/AndroidStudioProjects/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/AbedElghani/AndroidStudioProjects/app/src/main/res/layout/activity_send_sms.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AbedElghani/AndroidStudioProjects/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/AbedElghani/Yosefproject/app/src/main/res/layout/activity_all_questions.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AbedElghani/Yosefproject18.12/app/src/main/res/layout/activity_add_question.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AbedElghani/Yosefproject18.12/app/src/main/res/layout/activity_add_subject.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/AbedElghani/Yosefproject18.12/app/src/main/res/layout/activity_add_subject1.xml" value="0.36666666666666664" />
@@ -37,7 +38,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

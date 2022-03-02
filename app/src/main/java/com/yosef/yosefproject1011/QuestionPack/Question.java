@@ -1,6 +1,6 @@
 package com.yosef.yosefproject1011.QuestionPack;
 public class Question {
-    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Phone, Photo;
+    private String Question, NumberOfQuestion, Option1, Option2, Option3, Option4, Photo;
     private int Points;
 
     public Question(String Question, String NumberOfQuestion, int Points, String Option1, String Option2, String Option3, String Option4, String Photo) {
@@ -43,9 +43,7 @@ public class Question {
         NumberOfQuestion = numberOfQuestion;
     }
 
-    public String getOption1() {
-        return Option1;
-    }
+    public String getOption1() { return Option1; }
 
     public void setOption1(String option1) {
         Option1 = option1;

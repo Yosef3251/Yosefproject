@@ -25,7 +25,7 @@ import java.util.List;
 
 public class AllQuestionsActivity extends AppCompatActivity {
 
-    private RecyclerView rvQuestions;
+    private RecyclerView rvAllQuestions;
     AdapterQuestion adapter;
     FirebaseServices fbs;
     ArrayList<Question> que;
@@ -38,53 +38,35 @@ public class AllQuestionsActivity extends AppCompatActivity {
         fbs = FirebaseServices.getInstance();
         que = new ArrayList<Question>();
         readData();
-        MyCallBack = new MyCallBack() {
+        myCallBack = new MyCallBack() {
             @Override
-            public void onCallback(List<Question> restsList) {
+            public void onCallback(List<Question> questionsList) {
                 RecyclerView recyclerView = findViewById(R.id.rvQuestionsAllQuestions);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                adapter = new RecyclerViewAdapterQuestion(getApplicationContext(), Question);
+                adapter = new RecyclerViewAdapterQuestion(getApplicationContext(), que);
                 recyclerView.setAdapter(adapter);
             }
         };
 
-        // data to populate the RecyclerView with
-        ArrayList<String> QuestionNum = new ArrayList<>();
-        QuestionNum.add("Question 1");
-        QuestionNum.add("Question 2");
-        QuestionNum.add("Question 3");
-        QuestionNum.add("Question 4");
-        QuestionNum.add("Question 5");
 
-
-
-
-
-
-
-        // set up the RecyclerView
-        rvQuestions = findViewById(R.id.rvQuestionsAllQuestions);
-        rvQuestions.setLayoutManager(new LinearLayoutManager(this));
-        RecyclerViewAdapterQuestion adapter= new RecyclerViewAdapterQuestion(this, QuestionNum);
-        rvQuestions.setAdapter(adapter);
     }
 
     private void readData() {
         try {
 
-            fbs.getFire().collection("question")
+            fbs.getFire().collection("questions")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
-                                    rests.add(document.toObject(Question.class));
+                                    que.add(document.toObject(Question.class));
                                 }
 
-                                myCallback.onCallback(qque);
+                                MyCallBack.onCallback(que);
                             } else {
-                                Log.e("AllRestActivity: readData()", "Error getting documents.", task.getException());
+                                Log.e("AllQuestionActivity: readData()", "Error getting documents.", task.getException());
                             }
                         }
                     });

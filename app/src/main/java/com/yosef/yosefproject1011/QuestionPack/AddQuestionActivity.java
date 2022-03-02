@@ -23,6 +23,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.yosef.yosefproject1011.FirebaseServices;
 import com.yosef.yosefproject1011.R;
 
 import java.io.IOException;
@@ -31,7 +32,7 @@ import java.util.UUID;
 public class AddQuestionActivity extends AppCompatActivity {
     private EditText etQuestion, etNumber, etPoints, etOption1, etOption2, etOption3, etOption4;
     private ImageView ivAdd;
-    private AllQuestionsActivity.FirebaseServices fbs;
+    private FirebaseServices fbs;
     private Uri filePath;
     private static final String TAG = "AddQuestion";
     StorageReference storageReference;
@@ -52,7 +53,7 @@ public class AddQuestionActivity extends AppCompatActivity {
         etOption3 = findViewById(R.id.etOption3Question);
         etOption4 = findViewById(R.id.etOption4Question);
         ivAdd = findViewById(R.id.ivAddImgQuestion);
-        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
+        fbs = FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }
 

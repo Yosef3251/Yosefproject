@@ -29,6 +29,7 @@ public class QuestionDetailsActivty extends AppCompatActivity {
         connectComponents();
         Intent i = this.getIntent();
         Question que = (Question) i.getSerializableExtra("que");
+
         tvQuestion.setText(que.getQuestion());
         tvNumberOfQuestion.setText(que.getNumberOfQuestion());
         tvOption1.setText(que.getOption1());
