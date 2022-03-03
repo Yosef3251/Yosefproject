@@ -21,7 +21,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText etName, etEmail, etPassword, etPhone;
     private Button btn;
     private TextView tvBacklogin;
-    private AllQuestionsActivity.FirebaseServices fbs;
+    private FirebaseServices fbs;
     private Utilities utils;
     private static final String TAG ="SignupActivity";
 
@@ -41,7 +41,7 @@ public class SignupActivity extends AppCompatActivity {
         etPhone = findViewById(R.id.etPhoneSignup);
         btn = findViewById(R.id.btnSignup);
         tvBacklogin = findViewById(R.id.tvBackloginSignup);
-        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
+        fbs = FirebaseServices.getInstance();
         utils = Utilities.getInstance();
     }
     public void SignUpToApp(View view) {

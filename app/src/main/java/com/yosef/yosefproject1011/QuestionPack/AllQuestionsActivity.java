@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +35,8 @@ public class AllQuestionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_questions);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide(); //Hide Action Bar
 
         fbs = FirebaseServices.getInstance();
         que = new ArrayList<Question>();
@@ -43,18 +46,15 @@ public class AllQuestionsActivity extends AppCompatActivity {
             public void onCallback(List<Question> questionsList) {
                 RecyclerView recyclerView = findViewById(R.id.rvQuestionsAllQuestions);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                adapter = new RecyclerViewAdapterQuestion(getApplicationContext(), que);
+                adapter = new AdapterQuestion(getApplicationContext(), que);
                 recyclerView.setAdapter(adapter);
             }
         };
-
-
     }
 
     private void readData() {
         try {
-
-            fbs.getFire().collection("questions")
+            fbs.getFire().collection("Questions")
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                         @Override
@@ -63,8 +63,7 @@ public class AllQuestionsActivity extends AppCompatActivity {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     que.add(document.toObject(Question.class));
                                 }
-
-                                MyCallBack.onCallback(que);
+                                myCallBack.onCallback(que);
                             } else {
                                 Log.e("AllQuestionActivity: readData()", "Error getting documents.", task.getException());
                             }
@@ -76,6 +75,4 @@ public class AllQuestionsActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "error reading!" + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-    }
-
 }

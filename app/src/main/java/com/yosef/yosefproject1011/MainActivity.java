@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
     private Button btnLogin;
     private TextView tvForgetpass, tvCreata;
-    private AllQuestionsActivity.FirebaseServices fbs;
+    private FirebaseServices fbs;
     private Utilities utils;
 
     @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void connectComponents() {
         etUsername = findViewById(R.id.etUsernameMain);
         etPassword = findViewById(R.id.etPasswordMain);
-        fbs = AllQuestionsActivity.FirebaseServices.getInstance();
+        fbs = FirebaseServices.getInstance();
         utils = Utilities.getInstance();
     }
     public void Login(View view) {

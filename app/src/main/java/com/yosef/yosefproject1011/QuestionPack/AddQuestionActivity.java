@@ -34,8 +34,8 @@ public class AddQuestionActivity extends AppCompatActivity {
     private ImageView ivAdd;
     private FirebaseServices fbs;
     private Uri filePath;
-    private static final String TAG = "AddQuestion";
-    StorageReference storageReference;
+    private static final String TAG = "AddQuestionActivity";
+    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,14 +70,14 @@ public class AddQuestionActivity extends AppCompatActivity {
         Option4 = etOption4.getText().toString();
         if (ivAdd.getDrawable() == null)
             Photo = "no_image";
-        else Photo = storageReference.getDownloadUrl().toString();
+        else Photo = storageReference.toString();
 
         if (Question.trim().isEmpty() || Number.trim().isEmpty() || Option1.trim().isEmpty() ||
                 Option2.trim().isEmpty() || Option3.trim().isEmpty() || Photo.trim().isEmpty()) {
             Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
             return;
         }
-        com.yosef.yosefproject1011.QuestionPack.Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
+        Question q = new Question(Question, Number, Points, Option1, Option2, Option3, Option4, Photo);
         fbs.getFire().collection("Questions")
                 .add(q)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -93,12 +93,14 @@ public class AddQuestionActivity extends AppCompatActivity {
                     }
                 });
     }
+
     public void AddPhoto(View view) {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 40);
     }
+
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

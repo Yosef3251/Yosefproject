@@ -17,12 +17,14 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
 
     private List<Question> mData;
     private LayoutInflater mInflater;
-    private RecyclerViewAdapterQuestion.ItemClickListener mClickListener;
+    private Context context;
+    private AdapterQuestion.ItemClickListener mClickListener;
 
     // data is passed into the constructor
     AdapterQuestion(Context context, List<Question> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.context = context;
     }
 
     // inflates the row layout from xml when needed
@@ -71,7 +73,7 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
     }
 
     // allows clicks events to be caught
-    void setClickListener(RecyclerViewAdapterQuestion.ItemClickListener itemClickListener) {
+    void setClickListener(AdapterQuestion.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
