@@ -7,101 +7,19 @@
     tools:context=".FirstPageActivity">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="65dp"
-        android:text="1.Safety"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="65dp"
-        android:text="2. Recognition test"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="65dp"
-        android:text="3.Cognition test"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="65dp"
-        android:text="4.Circulation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="65dp"
-        android:text="5.Call for help"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="98dp"
-        android:text="6."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="166dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="187dp"
-        android:layout_marginBottom="17dp"
         android:background="#FF0000"
         android:backgroundTint="#FF0000"
         android:text=" Learn first aid "
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAddQuestionFirstpage" />
 
@@ -118,7 +36,7 @@
         android:text="Add Question"
         app:layout_constraintBottom_toTopOf="@+id/textView10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -142,19 +60,28 @@
 
     <Button
         android:id="@+id/btnAddSubjectFirstPage"
-        android:onClick="AddSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="36dp"
         android:layout_marginEnd="256dp"
         android:layout_marginBottom="66dp"
         android:backgroundTint="#FF0000"
+        android:onClick="AddSubject"
         android:text="Add Subject"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllSubjectsFirstPageActivity"
+        android:layout_width="409dp"
+        android:layout_height="454dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddSubjectFirstPage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

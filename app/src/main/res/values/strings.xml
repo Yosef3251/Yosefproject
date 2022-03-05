@@ -6,5 +6,6 @@
     <string name="question">Question</string>
     <string name="todo">TODO</string>
     <string name="err_firebase_general">Genera Error firebase!</string>
+    <string name="subject">Subject</string>
 
 </resources>

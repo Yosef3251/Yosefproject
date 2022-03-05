@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.SubjectPack;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +24,9 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.yosef.yosefproject1011.FirebaseServices;
+import com.yosef.yosefproject1011.FirstPageActivity;
+import com.yosef.yosefproject1011.R;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -34,7 +37,7 @@ public class AddSubjectActivity extends AppCompatActivity {
     private Button btnAddSubject;
     private FirebaseServices fbs;
     private Uri filePath;
-    private static final String TAG = "AddSubject";
+    private static final String TAG = "AddSubjectActivity";
     StorageReference storageReference;
 
     @Override
@@ -73,7 +76,7 @@ public class AddSubjectActivity extends AppCompatActivity {
                 return;
             }
 
-            com.yosef.yosefproject1011.Subject s = new Subject(Subject, Info, Photo);
+            com.yosef.yosefproject1011.SubjectPack.Subject s = new Subject(Subject, Info, Photo);
             fbs.getFire().collection("Subjects")
                     .add(s)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -185,7 +188,6 @@ public class AddSubjectActivity extends AppCompatActivity {
                                                         + (int) progress + "%");
                                     }
                                 });
-
             }
         }
     }

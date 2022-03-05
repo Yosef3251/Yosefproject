@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yosefproject1011">
         <activity
+            android:name=".UserDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuestionPack.QuestionDetailsActivty"
             android:exported="false" />
         <activity
-            android:name=".AllSubjectsActivity"
+            android:name=".SubjectPack.AllSubjectsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddSubjectActivity"
+            android:name=".SubjectPack.AddSubjectActivity"
             android:exported="false" />
         <activity
             android:name=".QuestionPack.AllQuestionsActivity"

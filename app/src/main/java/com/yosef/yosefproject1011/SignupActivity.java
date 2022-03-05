@@ -48,17 +48,26 @@ public class SignupActivity extends AppCompatActivity {
         String username = etEmail.getText().toString();
         String password = etPassword.getText().toString();
 
+        if (username.trim().isEmpty() || password.trim().isEmpty())
+        {
+            Toast.makeText(this, "Some fields are empty!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!utils.validateEmail(username) || !utils.validatePassword(password))
+        {
+            Toast.makeText(this, "Incorrect email or password!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         fbs.getAuth().createUserWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Account created successfully!", Toast.LENGTH_SHORT).show();
-                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            Intent i = new Intent(SignupActivity.this, FirstPageActivity.class);
                             startActivity(i);
                         } else {
-                            Toast.makeText(SignupActivity.this, "Failed to create a new account!", Toast.LENGTH_LONG).show();
-                            return;
                             // TODO: what to do if fails
                         }
                     }

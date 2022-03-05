@@ -39,6 +39,9 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
     public void onBindViewHolder(AdapterQuestion.ViewHolder holder, int position) {
         Question Que = mData.get(position);
         holder.tvQuestion.setText(Que.getQuestion());
+        holder.tvQuestion.setText(Que.getQuestion());
+        holder.tvQuestion.setText(Que.getQuestion());
+
         //holder.ivPhoto.setImageDrawable(rest.getPhoto());
     }
 
@@ -51,13 +54,13 @@ public class AdapterQuestion extends RecyclerView.Adapter<AdapterQuestion.ViewHo
 
     // stores and recycles views as they are scrolled off screen
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView tvQuestion;
+        TextView tvQuestion  ;
         ImageView ivQuestion;
 
         ViewHolder(View itemView) {
             super(itemView);
             tvQuestion = itemView.findViewById(R.id.tvQuestionRow);
-            ivQuestion = itemView.findViewById(R.id.ivQuestionRow);
+            ivQuestion = itemView.findViewById(R.id.ivNumQuestionRow);
             itemView.setOnClickListener(this);
         }
 

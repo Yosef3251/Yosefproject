@@ -1,10 +1,12 @@
 package com.yosef.yosefproject1011;
 
 import com.yosef.yosefproject1011.QuestionPack.Question;
+import com.yosef.yosefproject1011.SubjectPack.Subject;
 
-import java.util.List;
+import java.util.ArrayList;
 
- public interface MyCallBack {
-     void onCallback(List<Question> attractionsList);
+public interface MyCallBack {
+     void onCallback(ArrayList<Question> attractionsList);
 
+     void onCallBackSub(ArrayList<Subject> sub);
 }

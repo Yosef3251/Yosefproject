@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.SubjectPack;
 
 public class Subject {
     private String Subject, Info, Photo;

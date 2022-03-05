@@ -9,6 +9,8 @@ import android.view.WindowManager;
 
 import com.yosef.yosefproject1011.QuestionPack.AddQuestionActivity;
 import com.yosef.yosefproject1011.QuestionPack.AllQuestionsActivity;
+import com.yosef.yosefproject1011.SubjectPack.AddSubjectActivity;
+import com.yosef.yosefproject1011.SubjectPack.AllSubjectsActivity;
 
 public class FirstPageActivity extends AppCompatActivity {
 
@@ -35,4 +37,5 @@ public class FirstPageActivity extends AppCompatActivity {
         Intent i = new Intent(this, AddSubjectActivity.class);
         startActivity(i);
     }
+
 }

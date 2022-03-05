@@ -1,4 +1,4 @@
-package com.yosef.yosefproject1011;
+package com.yosef.yosefproject1011.SubjectPack;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,32 +8,38 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yosef.yosefproject1011.R;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewAdapterSubject extends RecyclerView.Adapter<com.yosef.yosefproject1011.RecyclerViewAdapterSubject.ViewHolder>{
+public class AdapterSubject extends RecyclerView.Adapter<AdapterSubject.ViewHolder>{
 
-    private List<String> mData;
+    private List<Subject> mData;
     private LayoutInflater mInflater;
-    private RecyclerViewAdapterSubject.ItemClickListener mClickListener;
+    private Context context;
+    private AdapterSubject.ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    RecyclerViewAdapterSubject(Context context, List<String> data) {
+    AdapterSubject(Context context, ArrayList<Subject> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
+        this.context = context;
     }
 
     // inflates the row layout from xml when needed
     @Override
-    public RecyclerViewAdapterSubject.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AdapterSubject.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.row_question, parent, false);
-        return new RecyclerViewAdapterSubject.ViewHolder(view);
+        return new AdapterSubject.ViewHolder(view);
     }
 
     // binds the data to the TextView in each row
     @Override
-    public void onBindViewHolder(RecyclerViewAdapterSubject.ViewHolder holder, int position) {
-        String animal = mData.get(position);
-        holder.myTextView.setText(animal);
+    public void onBindViewHolder(AdapterSubject.ViewHolder holder, int position) {
+        Subject subject = mData.get(position);
+        holder.myTextView.setText(subject.getSubject());
+        holder.myTextView.setText(subject.getInfo());
     }
 
     // total number of rows
@@ -60,12 +66,12 @@ public class RecyclerViewAdapterSubject extends RecyclerView.Adapter<com.yosef.y
     }
 
     // convenience method for getting data at click position
-    String getItem(int id) {
+    Subject getItem(int id) {
         return mData.get(id);
     }
 
     // allows clicks events to be caught
-    void setClickListener(RecyclerViewAdapterSubject.ItemClickListener itemClickListener) {
+    void setClickListener(AdapterSubject.ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
