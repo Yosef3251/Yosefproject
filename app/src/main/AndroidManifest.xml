@@ -31,7 +31,7 @@
             android:name=".FirstPageActivity"
             android:exported="false" />
         <activity
-            android:name=".SendSMSActivity"
+            android:name=".Random.SendSMSActivity"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"

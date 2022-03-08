@@ -14,8 +14,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.yosef.yosefproject1011.FirebaseServices;
-import com.yosef.yosefproject1011.MyCallBack;
+import com.yosef.yosefproject1011.Random.FirebaseServices;
+import com.yosef.yosefproject1011.Random.MyCallBack;
 import com.yosef.yosefproject1011.QuestionPack.Question;
 import com.yosef.yosefproject1011.R;
 

@@ -24,8 +24,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.yosef.yosefproject1011.FirebaseServices;
-import com.yosef.yosefproject1011.FirstPageActivity;
+import com.yosef.yosefproject1011.Random.FirebaseServices;
 import com.yosef.yosefproject1011.R;
 
 import java.io.IOException;
@@ -92,12 +91,9 @@ public class AddSubjectActivity extends AppCompatActivity {
                         }
                     });
         }
-        public void AddPhoto(View view) {
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent, "Select Picture"), 40);
-        }
+
+
+
 
         public void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
@@ -120,6 +116,15 @@ public class AddSubjectActivity extends AppCompatActivity {
                 }
             }
         }
+    public void Addphotosubleft(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 40);
+
+
+
+    }
 
         private void uploadImage() {
             if (filePath != null) {
@@ -190,4 +195,11 @@ public class AddSubjectActivity extends AppCompatActivity {
                                 });
             }
         }
+
+    public void Addphotosubright(View view) {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), 40);
     }
+}

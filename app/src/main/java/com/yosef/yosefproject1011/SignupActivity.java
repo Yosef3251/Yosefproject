@@ -15,7 +15,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
-import com.yosef.yosefproject1011.QuestionPack.AllQuestionsActivity;
+import com.yosef.yosefproject1011.Random.FirebaseServices;
+import com.yosef.yosefproject1011.Random.Utilities;
 
 public class SignupActivity extends AppCompatActivity {
     private EditText etName, etEmail, etPassword, etPhone;
