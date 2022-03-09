@@ -11,8 +11,9 @@
         android:layout_width="177dp"
         android:layout_height="166dp"
         android:layout_marginEnd="4dp"
-        android:onClick="Addphotosubright"
         android:layout_marginBottom="147dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="Addphotosubright"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/addimg" />
@@ -25,7 +26,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="143dp"
         android:layout_marginBottom="14dp"
-        android:text="Add Subject"
+        android:text="@string/add_subject"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/etSubjectSubject"
@@ -44,11 +45,13 @@
         android:ems="10"
         android:hint="Subject..."
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        android:autofillHints="" />
 
     <ImageView
         android:id="@+id/ivPicLeftSubject"
@@ -57,6 +60,7 @@
         android:layout_marginStart="6dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="44dp"
+        android:contentDescription="@string/app_name"
         android:onClick="Addphotosubleft"
         app:layout_constraintBottom_toTopOf="@+id/btnAddSubjectSubject"
         app:layout_constraintEnd_toStartOf="@+id/ivPicRightSubject"
@@ -72,6 +76,7 @@
         android:layout_marginEnd="137dp"
         android:layout_marginBottom="55dp"
         android:backgroundTint="#FF0000"
+        android:onClick="AddSubject"
         android:text="Add Subject"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -88,6 +93,7 @@
         android:layout_marginBottom="113dp"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Info...."
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/ivPicRightSubject"
         app:layout_constraintEnd_toEndOf="parent"

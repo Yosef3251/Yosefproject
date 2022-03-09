@@ -53,6 +53,7 @@ public class AddQuestionActivity extends AppCompatActivity {
         etOption3 = findViewById(R.id.etOption3Question);
         etOption4 = findViewById(R.id.etOption4Question);
         ivAdd = findViewById(R.id.ivAddImgQuestion);
+
         fbs = FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }

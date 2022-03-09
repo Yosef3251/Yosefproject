@@ -24,6 +24,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.yosef.yosefproject1011.QuestionPack.Question;
 import com.yosef.yosefproject1011.Random.FirebaseServices;
 import com.yosef.yosefproject1011.R;
 
@@ -33,11 +34,10 @@ import java.util.UUID;
 public class AddSubjectActivity extends AppCompatActivity {
     private EditText etSubject, etInfo;
     private ImageView ivPicLeft, ivPicRight;
-    private Button btnAddSubject;
     private FirebaseServices fbs;
     private Uri filePath;
     private static final String TAG = "AddSubjectActivity";
-    StorageReference storageReference;
+    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,20 +45,22 @@ public class AddSubjectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_subject);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide(); //Hide Action Bar
+        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_subject);
 
         etSubject = findViewById(R.id.etSubjectSubject);
         etInfo = findViewById(R.id.etInfoSubject);
         ivPicLeft = findViewById(R.id.ivPicLeftSubject);
         ivPicRight = findViewById(R.id.ivPicRightSubject);
-        btnAddSubject = findViewById(R.id.btnAddSubjectSubject);
 
         fbs = FirebaseServices.getInstance();
         storageReference = fbs.getStorage().getReference();
     }
 
-        public void AddQuestion(View view) {
+        public void AddSubject(View view) {
             // check if any field is empty
             String Subject, Info, Photo;
+
             Subject = etSubject.getText().toString();
             Info = etInfo.getText().toString();
 
@@ -70,12 +72,12 @@ public class AddSubjectActivity extends AppCompatActivity {
                 Photo = "no_image";
             else Photo = storageReference.getDownloadUrl().toString();
 
-            if (Subject.trim().isEmpty() || Info.trim().isEmpty()) {
+            if (Subject.trim().isEmpty() || Info.trim().isEmpty() || Photo.trim().isEmpty()) {
                 Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            com.yosef.yosefproject1011.SubjectPack.Subject s = new Subject(Subject, Info, Photo);
+            Subject s = new Subject(Subject, Info, Photo);
             fbs.getFire().collection("Subjects")
                     .add(s)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -105,6 +107,7 @@ public class AddSubjectActivity extends AppCompatActivity {
                             Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), data.getData());
                             ivPicLeft.setBackground(null);
                             ivPicLeft.setImageBitmap(bitmap);
+
 
                             uploadImage();
                         } catch (IOException e) {
