@@ -1,6 +1,7 @@
 package com.yosef.yosefproject1011.SubjectPack;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.yosef.yosefproject1011.R;
+import com.yosef.yosefproject1011.UserDetailsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +20,20 @@ public class AdapterSubject extends RecyclerView.Adapter<AdapterSubject.ViewHold
     private List<Subject> mData;
     private LayoutInflater mInflater;
     private Context context;
-    private AdapterSubject.ItemClickListener mClickListener;
+
+    private final AdapterSubject.ItemClickListener mClickListener = new ItemClickListener() {
+        @Override
+        public void onItemClick(View view, int position) {
+            Subject subject = mData.get(position);
+            Intent i = new Intent(context, UserDetailsActivity.class);
+            //i.putExtra("subject", subject);
+
+            context.startActivity(i);
+        }
+    };
 
     // data is passed into the constructor
-    AdapterSubject(Context context, ArrayList<Subject> data) {
+    public AdapterSubject(Context context, ArrayList<Subject> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mData = data;
         this.context = context;
@@ -30,7 +42,7 @@ public class AdapterSubject extends RecyclerView.Adapter<AdapterSubject.ViewHold
     // inflates the row layout from xml when needed
     @Override
     public AdapterSubject.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.row_question, parent, false);
+        View view = mInflater.inflate(R.layout.row_subject, parent, false);
         return new AdapterSubject.ViewHolder(view);
     }
 
@@ -39,7 +51,6 @@ public class AdapterSubject extends RecyclerView.Adapter<AdapterSubject.ViewHold
     public void onBindViewHolder(AdapterSubject.ViewHolder holder, int position) {
         Subject subject = mData.get(position);
         holder.myTextView.setText(subject.getSubject());
-        holder.myTextView.setText(subject.getInfo());
     }
 
     // total number of rows
@@ -71,9 +82,7 @@ public class AdapterSubject extends RecyclerView.Adapter<AdapterSubject.ViewHold
     }
 
     // allows clicks events to be caught
-    void setClickListener(AdapterSubject.ItemClickListener itemClickListener) {
-        this.mClickListener = itemClickListener;
-    }
+
 
     // parent activity will implement this method to respond to click events
     public interface ItemClickListener {

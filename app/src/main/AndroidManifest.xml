@@ -16,9 +16,6 @@
             android:name=".QuestionPack.QuestionDetailsActivty"
             android:exported="false" />
         <activity
-            android:name=".SubjectPack.AllSubjectsActivity"
-            android:exported="false" />
-        <activity
             android:name=".SubjectPack.AddSubjectActivity"
             android:exported="false" />
         <activity

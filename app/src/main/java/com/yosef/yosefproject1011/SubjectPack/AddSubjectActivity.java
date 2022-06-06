@@ -63,16 +63,17 @@ public class AddSubjectActivity extends AppCompatActivity {
 
             Subject = etSubject.getText().toString();
             Info = etInfo.getText().toString();
+            Photo = "";
 
-            if (ivPicLeft.getDrawable() == null)
+            /*if (ivPicLeft.getDrawable() == null)
                 Photo = "no_image";
-            else Photo = storageReference.getDownloadUrl().toString();
+            else Photo= storageReference.getDownloadUrl().toString();
 
             if (ivPicRight.getDrawable() == null)
                 Photo = "no_image";
             else Photo = storageReference.getDownloadUrl().toString();
-
-            if (Subject.trim().isEmpty() || Info.trim().isEmpty() || Photo.trim().isEmpty()) {
+*/
+            if (Subject.trim().isEmpty() || Info.trim().isEmpty()) {
                 Toast.makeText(this, R.string.err_firebase_general, Toast.LENGTH_SHORT).show();
                 return;
             }

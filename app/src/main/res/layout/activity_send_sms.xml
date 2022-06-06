@@ -12,9 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="388dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="295dp"
+        android:backgroundTint="#FF0000"
         android:text="Send"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,20 +24,22 @@
 
     <EditText
         android:id="@+id/etPhoneSMS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
+        android:layout_width="261dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="392dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="21dp"
         android:layout_marginBottom="294dp"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="phone"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSendSMS"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvTroubleSMS"

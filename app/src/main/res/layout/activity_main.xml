@@ -87,6 +87,7 @@
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="13dp"
         android:text="Forget password?"
+        android:onClick="Gotoresetpass"
         app:layout_constraintBottom_toTopOf="@+id/tvCreataMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

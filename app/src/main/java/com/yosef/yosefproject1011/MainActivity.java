@@ -75,4 +75,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, SendSMSActivity.class);
         startActivity(i);
     }
+
+    public void Gotoresetpass(View view) {
+        Intent i = new Intent(this, SendSMSActivity.class);
+        startActivity(i);
+    }
 }
